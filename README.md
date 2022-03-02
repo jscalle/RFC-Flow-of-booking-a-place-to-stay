@@ -13,7 +13,7 @@ The reservation process starts from the search section and/or list of results by
 
 **Basic example**
 
-[Flujo](https://firebasestorage.googleapis.com/v0/b/cvpersonal-d2b5a.appspot.com/o/Flujo.JPG?alt=media&amp;token=aa953b10-ca42-4433-92d9-eb72946d3c66)
+![Flujo](https://firebasestorage.googleapis.com/v0/b/cvpersonal-d2b5a.appspot.com/o/Flujo.JPG?alt=media&amp;token=aa953b10-ca42-4433-92d9-eb72946d3c66)
 
 **Motivation**
 
