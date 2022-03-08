@@ -1,54 +1,43 @@
-# RFC-Flow-of-booking-a-place-to-stay
-**Start date** : 2021-03-01
+Fecha de inicio: 2021-03-01
+Miembros: Cristian Castillo, Juan Sebastian Calle
+RFC PR: 
+Resumen
+Flujo de la reserva de un lugar para alojarse 
+El proceso de reserva comienza desde la sección de búsqueda y/o lista de resultados por defecto realizando una solicitud de habitaciones según su disponibilidad, de acuerdo con el resultado de una consulta realizada a las habitaciones disponibles el usuario realiza la reserva según sus necesidades y requerimientos, dentro de las opciones que podrá observar el usuario tendrá diferentes servicios que podrá agregar a lo que desea adquirir en su reserva, el sistema realizará diferentes validaciones que le darán al usuario la seguridad que todo los requerimientos seleccionados están disponibles y los detalles necesarios, antes de la confirmación del pago, el usuario deberá realizar un registro o un ingreso a su cuenta, esto con el objetivo de tener los datos básicos necesarios para realizar la reserva, como nombre, documento de identidad, correo electrónico de contacto y teléfono de contacto, adicionales a los otros datos posiblemente requeridos, al momento de realizar un login y de confirmar se realizará una reserva “provisional” de aproximadamente 20 minutos que tendrá el usuario para realizar los pagos necesarios, al recibir la confirmación del pago el sistema le otorgará al usuario el resumen actualizado de su reserva, con las opciones de imprimir o un QR para su posterior lectura y validación en las instalaciones, adicional se enviará un correo electrónico pasado estos 20 minutos si el sistema no recibe la confirmación del pago de parte del usuario se volverá a poner como disponible los recursos que se habían previamente seleccionado
 
-**Members** : Cristian Castillo, Juan Sebastian Calle
+Ejemplo básico
+Flujo.JPG (1412×514) (firebasestorage.googleapis.com)
+Motivación
+¿Por qué lo hacemos?
+Es el proceso puntual por el cual todo el sistema de reserva toma coherencia y/o sentido, la experiencia de usuario en este punto es uno de los temas que podrá ayudar a que sea utilizado el servicio y se realice una reserva
+¿Cuál es el resultado esperado?
+Se espera que el flujo sea lo más adecuado y agradable para un usuario que requiere de una reserva en un lugar adecuado, es necesario previamente buenos match en la consulta, pero el flujo que lleva el usuario es importante para su experiencia
 
-**RFC PR** :
+Diseño detallado
+Este es el grueso de la RFC. Explica el diseño con el suficiente detalle para que alguien familiarizado con React lo entienda, y para que alguien familiarizado con la implementación lo ponga en práctica. Esto debería entrar en detalles y casos de esquina, e incluir ejemplos de cómo se utiliza la característica. Cualquier terminología nueva debe ser definida aquí.
 
-**Abstract**
+Inconvenientes
+¿Por qué no deberíamos hacer esto? Hay que tener en cuenta
 
-**Flow of the reservation of a place to stay**
+el coste de implementación, tanto en términos de tamaño de código como de complejidad
+si la característica propuesta puede ser implementada en el espacio de usuario
+el impacto en la enseñanza de React
+la integración de esta función con otras funciones existentes y previstas
+el coste de la migración de las aplicaciones React existentes (¿es un cambio de ruptura?)
+La elección de cualquier camino tiene ventajas y desventajas. Intenta identificarlos aquí.
 
-The reservation process starts from the search section and/or list of results by default making a request for rooms according to their availability, according to the result of a query made to the available rooms the user makes the reservation according to their needs and requirements, within the options that can be seen the user will have different services that can be added to what you want to purchase in your reservation, the system will make different validations that will give the user the security that all the selected requirements are available and the necessary details, before the confirmation of the payment, the user must make a registration or a login to your account, this in order to have the basic data necessary to make the reservation, In addition to the other data possibly required, at the moment of login and confirmation, a &quot;provisional&quot; reservation of approximately 20 minutes will be made, which the user will have to make the necessary payments, upon receiving the payment confirmation the system will provide the user with an updated summary of the reservation, with the option to print or a QR for later reading and validation at the facilities, in addition an email will be sent after these 20 minutes if the system does not receive the payment confirmation from the user, the resources that had been previously selected will be made available again.
+Alternativas
+¿Qué otros diseños se han considerado? ¿Cuál es el impacto de no hacerlo?
 
-**Basic example**
+Estrategia de adopción
+Si aplicamos esta propuesta, ¿cómo la adoptarán los actuales desarrolladores del C9? ¿Se trata de un cambio radical? ¿Podemos escribir un codemod? ¿Debemos coordinarnos con otros proyectos o bibliotecas?
 
-![Flujo](https://firebasestorage.googleapis.com/v0/b/cvpersonal-d2b5a.appspot.com/o/Flujo.JPG?alt=media&amp;token=aa953b10-ca42-4433-92d9-eb72946d3c66)
+¿Cómo lo enseñamos?
+¿Qué nombres y terminología funcionan mejor para estos conceptos y por qué? ¿Cuál es la mejor manera de presentar esta idea? ¿Como una continuación de los patrones de los proyectos C9 existentes?
 
-[This is a example of flow on backend](https://cawemo.com/share/6831ff92-a42f-4217-8d19-656cd5d408b6)
+¿Significa la aceptación de esta propuesta que la documentación del C9 debe ser reorganizada o alterada? ¿Cambia la forma en que se enseña el C9 a los nuevos desarrolladores a cualquier nivel?
 
-**Motivation**
+¿Cómo debería enseñarse esta característica a los desarrolladores del C9 existentes?
 
-**¿Why do we do it?**
-
-It is the specific process by which the whole reservation system takes coherence and/or sense, the user experience at this point is one of the issues that can help the service to be used and a reservation to be made.
-
-**¿What is the expected result?**
-
-It is expected that the flow is the most appropriate and pleasant for a user who requires a reservation in a suitable place, it is necessary to previously have a good match in the consultation, but the flow that the user has is important for his experience.
-
-**Detailed design**
-
-[WIP]
-
-Drawbacks
-
-In general terms it should not be an option, it is necessary to have an adequate flow for the user experience to be adequate enough, the possible obstacles could be that the user understands that the flow is conditioned so that it is very likely that at the time of performing the process he will spend more money than he expects due to _upselling_ strategies that will be applied through the flow and different bonuses or add-ons that may be presented in the flow.
-
-A second disadvantage would be to receive so many requests precisely because of the good flow that the reserve-provision query is saturated and does not work correctly.
-
-**Alternatives**
-
-[WIP]
-
-**Adoption strategy**
-
-[WIP]
-
-**¿How do we teach it?**
-
-[WIP]
-
-**¿How should this feature be taught to existing C9 developers?**
-
-[WIP]
+Preguntas sin resolver
+*
